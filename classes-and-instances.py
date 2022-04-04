@@ -1,8 +1,6 @@
 # python obejct-oriented Programming. 
 
 
-from cgi import print_arguments
-
 
 class Employee:
 
