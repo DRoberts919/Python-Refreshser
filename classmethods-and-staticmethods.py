@@ -4,6 +4,7 @@
 
 
 from email.policy import EmailPolicy
+from types import ClassMethodDescriptorType
 
 
 class Employee:
@@ -28,6 +29,12 @@ class Employee:
     def set_raise_amount(cls,amount):
         cls.raise_amount = amount
 
+    @classmethod
+    def fromString(cls,emp_str):
+        first,last,pay = emp_str.split('-')
+        return cls(first,last,pay)
+
+
 
 
         
@@ -43,3 +50,13 @@ Employee.set_raise_amount(1.05)
 print(Employee.raise_amount)
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
+
+
+
+# class method to update string
+emp_str_1 = 'johh-Doe-7000'
+emp_str_2 = 'Steve-smith-30000'
+emp_str_3 = 'Jane-Doe-90000'
+
+new_emp_1 = Employee.fromString(emp_str_1)
+print(new_emp_1.email)
