@@ -1,7 +1,5 @@
 # python obejct-oriented Programming. 
 
-
-
 class Employee:
     raise_amount = 1.04
 
